@@ -1,0 +1,74 @@
+% Marshall Bruner's resume
+
+\documentclass[11pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+\RequirePackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+\usepackage{sectsty}
+\usepackage{tabularx}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,
+  top=15mm
+}
+
+\pagestyle{empty}
+
+\usepackage{sectsty}
+
+% Macros
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+\newcommand{\sepspace}{\vspace*{1em}}
+
+% Section formatting
+\sectionfont{
+    \Large
+    \sectionrule{0pt}{0pt}{-5pt}{0.5pt}
+}
+
+% Name
+% Arguments:
+% - name
+% - address
+% - phone number
+% - email
+% - linkedin
+% - github
+\newcommand{\name}[6]{
+  \begin{center}
+    {\Huge \scshape \texttt{#1}} \\ \vspace{1mm}
+    #2 \\ \vspace{1mm}
+    \small \raisebox{-0.1\height}\faPhone \ \underline{#3} ~
+    \href{mailto:#4}{\raisebox{-0.1\height} \faEnvelope \  \underline{#4}} ~
+    \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedinSquare \  \underline{#5}} ~
+    \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}}
+  \end{center}\par
+}
+
+\newcommand{\school}[7]{
+  \vspace{-1.5mm}
+\begin{tabularx}{\textwidth}{
+    % >{\raggedright\arraybackslash}X
+    p{10cm}
+    >{\raggedleft\arraybackslash}X
+}
+\textbf{#1} & \textbf{#4 - #5} \\
+\textit{#2} & \textit{\textbf{GPA: #3}} \\
+\textit{#6} & \textit{#7} \\
+% \multicolumn{2}{l}{}{#6} \\
+\end{tabularx}
+}
+
+\begin{document}
+\name{Marshall Bruner}{Denver, CO}{+1 970-568-6162}{brunerm99@gmail.com}{marshall-bruner}{brunerm99}
+
+\section*{EDUCATION} \vspace{-1.5mm}
+\school{Colorado State University}{M.S. Electrical Engineering}{3.85}{Jan. 2021}{May 2022}{Thesis - Design Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}{Fort Collins, CO}
+\end{document}
