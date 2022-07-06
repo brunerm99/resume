@@ -1,0 +1,9 @@
+#+title: Marshall Bruner's Resume
+
+I am remaking my resume in LaTeX to get better with the tool and have a more convienent way of editing / adding experience.
+
+* Compile
+Nothing special, just run
+#+BEGIN_SRC bash
+pdflatex resume.tex
+#+END_SRC
