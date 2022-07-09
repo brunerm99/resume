@@ -9,12 +9,14 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{sectsty}
 \usepackage{tabularx}
+\usepackage{listofitems}
 
 \usepackage{geometry}
 \geometry{
   a4paper,
-  left=20mm,
-  top=15mm
+  left=6mm,
+  right=6mm,
+  top=10mm
 }
 
 \pagestyle{empty}
@@ -29,7 +31,7 @@
 
 % Section formatting
 \sectionfont{
-    \Large
+    \large
     \sectionrule{0pt}{0pt}{-5pt}{0.5pt}
 }
 
@@ -52,23 +54,124 @@
   \end{center}\par
 }
 
+% School
+% Arguments:
+% - school
+% - degree
+% - GPA
+% - start date
+% - end date
+% - other
+% - location
 \newcommand{\school}[7]{
   \vspace{-1.5mm}
-\begin{tabularx}{\textwidth}{
-    % >{\raggedright\arraybackslash}X
+  \begin{tabularx}{\textwidth}{
     p{10cm}
     >{\raggedleft\arraybackslash}X
+  }
+    \textbf{#1} & \textbf{#4 - #5} \\
+    \textit{#2} & \textit{\textbf{GPA: #3}} \\
+    \textit{#6} & \textit{#7} \\
+  \end{tabularx}
 }
-\textbf{#1} & \textbf{#4 - #5} \\
-\textit{#2} & \textit{\textbf{GPA: #3}} \\
-\textit{#6} & \textit{#7} \\
-% \multicolumn{2}{l}{}{#6} \\
-\end{tabularx}
+
+% Job
+% Arguments:
+% - company
+% - start date
+% - end date
+% - location
+% - position
+% - comma-separated list of bullet points
+\newcommand{\job}[6]{
+  \readlist*\bulletslist{#6}
+  \vspace{-1.5mm}
+  \begin{tabularx}{\textwidth}{
+    p{14.5cm}
+    >{\raggedleft\arraybackslash}X
+    }
+    \textbf{#1} & \textbf{#2} - \textbf{#3} \\
+    \textit{\underline{#4}} & \textit{#5} \\
+    \vspace{-0.5cm}
+    \begin{itemize}
+      \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
+    \end{itemize}
+  \end{tabularx}
+}
+
+% Project
+% Arguments:
+% - project title
+% - start date
+% - end date
+% - comma-separated list of bullet points
+% - link to project
+\newcommand{\project}[5]{
+  \readlist*\bulletslist{#4}
+  \vspace{-1.5mm}
+  \begin{tabularx}{\textwidth}{
+    p{14.5cm}
+    >{\raggedleft\arraybackslash}X
+    }
+    \href{#5}{\underline{\textbf{#1}}} & \textbf{#2} - \textbf{#3} \\
+    \vspace{-0.5cm}
+    \begin{itemize}
+      \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
+    \end{itemize}
+  \end{tabularx}
 }
 
 \begin{document}
 \name{Marshall Bruner}{Denver, CO}{+1 970-568-6162}{brunerm99@gmail.com}{marshall-bruner}{brunerm99}
 
-\section*{EDUCATION} \vspace{-1.5mm}
+\vspace{-0.65cm}
+
+\section*{EDUCATION}
 \school{Colorado State University}{M.S. Electrical Engineering}{3.85}{Jan. 2021}{May 2022}{Thesis - Design Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}{Fort Collins, CO}
+\school{Colorado State University}{B.S. Electrical Engineering}{3.47}{Aug. 2017}{May 2021}{}{Fort Collins, CO}
+
+\vspace{-0.5cm}
+
+\section*{EXPERIENCE}
+\job{Ball Aerospace}
+{June 2021}
+{Present}
+{RF Intern, Technical Aide}
+{Broomfield, CO}
+{{Simulated, designed, and tested an RF Front-End PWB at extreme temperatures},{Built an embedded webpage used to interact with a phased array antenna},{Helped coworkers finish schematic and layout for their PWB’s},{High-power testing of real antenna loads}}
+\job{Colorado State University}
+{Jan 2021}
+{May 2022}
+{Graduate Research Assistant}
+{Fort Collins, CO}
+{{Design, schematic, and layout of a modular, drone-mountable, X-band FMCW radar},{Signal processing and data visualization for Analog Device’s FMCW Phaser Board},{Work for the Phaser Board was presented at IMS 2022 and IEEE-APS 2022 workshops}}
+\job{CHILL Radar Lab}
+{May 2020}
+{May 2021}
+{Lab Assistant}
+{Greeley, CO}
+{{Built a real-time radar display to easily display and animate radar data},{Performed characterizations and measurements of radar equipment},{Wrote firmware for an ARM-Cortex PSOC}}
+
+\vspace{-0.5cm}
+
+\section*{PROJECTS}
+\project{5G Electronics Senior Design Project}
+{Jun 2020}
+{May 2021}
+{{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands},{Experience using FieldFox, EMPro, ADS, SystemVue}}
+{https://drive.google.com/file/d/1jnmEm4owg6Irm8_FP4LNQ6NCM40VRgA7/view?usp=sharing}
+\project{Fuzzy Logic Clutter Filter}
+{Nov 2020}
+{Dec 2020}
+{{Applied the machine learning technique, fuzzy logic, to radar data as a clutter filter}}
+{https://drive.google.com/file/d/1ZUYzztMVOXb6Fy5-VPBcrxMdchSZ3y8y/view}
+\project{Environment-Mapping Car}
+{Nov 2020}
+{Dec 2020}
+{Built and programmed DC powered car with attached ultrasonic sensor for mobile mapping of the surrounding environment}
+{https://drive.google.com/file/d/1jjRZd7_2CnEgP2Gu1lF2XtPDVP_Ej0Gg/view}
+
+\vspace{-0.5cm}
+
+\section*{SKILLS \& ABILITIES}
 \end{document}
