@@ -1,6 +1,6 @@
 % Marshall Bruner's resume
 
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -63,8 +63,8 @@
     >{\raggedleft\arraybackslash}X
   }
     \textbf{#1} & \textbf{#4 - #5} \\
-    \textit{#2} & \textit{\textbf{GPA: #3}} \\
-    \textit{#6} & \textit{#7} \\
+    \textit{#2} - \textbf{\textit{GPA: #3}} & \textit{#7} \\
+    \multicolumn{2}{l}{\textit{#6}} \\
   \end{tabularx}
 }
 
@@ -75,7 +75,7 @@
 % - end date
 % - location
 % - position
-% - comma-separated list of bullet points
+% - bullet points (comma-separated list)
 \newcommand{\job}[6]{
   \readlist*\bulletslist{#6}
   \vspace{-1.5mm}
@@ -85,10 +85,12 @@
     }
     \textbf{#1} & \textbf{#2} - \textbf{#3} \\
     \textit{\underline{#4}} & \textit{#5} \\
-    \vspace{-0.5cm}
+    \vspace{-0.7cm}
+    % \multicolumn{2}{l}{
     \begin{itemize}
-      \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
-    \end{itemize}
+      \foreachitem\bullet\in\bulletslist{\item \bullet\vspace{-0.3cm}}
+    \end{itemize} \\
+    % } \\
   \end{tabularx}
 }
 
@@ -97,7 +99,7 @@
 % - project title
 % - start date
 % - end date
-% - comma-separated list of bullet points
+% - bullet points (comma-separated list)
 % - link to project
 \newcommand{\project}[5]{
   \readlist*\bulletslist{#4}
@@ -107,10 +109,22 @@
     >{\raggedleft\arraybackslash}X
     }
     \href{#5}{\underline{\textbf{#1}}} & \textbf{#2} - \textbf{#3} \\
-    \vspace{-0.5cm}
+    \vspace{-0.7cm}
     \begin{itemize}
       \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
     \end{itemize}
+  \end{tabularx}
+}
+
+% Skill
+% Arguments:
+% - group
+% - skills (comma-separated list)
+\newcommand{\skill}[2]{
+  \begin{tabularx}{\textwidth}{
+    X
+    }
+    \textbf{#1:} #2
   \end{tabularx}
 }
 
@@ -120,8 +134,20 @@
 \vspace{-0.65cm}
 
 \section*{EDUCATION}
-\school{Colorado State University}{M.S. Electrical Engineering}{3.85}{Jan. 2021}{May 2022}{Thesis - Design Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}{Fort Collins, CO}
-\school{Colorado State University}{B.S. Electrical Engineering}{3.47}{Aug. 2017}{May 2021}{}{Fort Collins, CO}
+\school{Colorado State University}
+{M.S. Electrical Engineering}
+{3.85}
+{Jan. 2021}
+{May 2022}
+{Thesis - Design, Deployment, and Cost Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}
+{Fort Collins, CO}
+\school{Colorado State University}
+{B.S. Electrical Engineering}
+{3.47}
+{Aug. 2017}
+{May 2021}
+{}
+{Fort Collins, CO}
 
 \vspace{-0.5cm}
 
@@ -167,4 +193,14 @@
 \vspace{-0.5cm}
 
 \section*{SKILLS \& ABILITIES}
+\vspace{-0.2cm}
+\skill{Communication}
+{Excellent Technical Communication and Presentation Skills, Experience Presenting PDR/CDRs, Technical Paper/Presentation Formatting}
+\skill{Languages}
+{Python, C, Matlab, SQL, Bash, JavaScript}
+\skill{Design / Simulation Tools}
+{HFSS, KiCad, QucsStudio, LTSpice, Cadence Virtuoso}
+\skill{Technologies / Tools}
+{Git, \LaTeX, Linux, Benchtop measurement equipment}
+
 \end{document}
