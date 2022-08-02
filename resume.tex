@@ -58,6 +58,7 @@
 % - location
 \newcommand{\school}[7]{
   \vspace{-1.5mm}
+  % \readlist*\bulletslist{#6}
   \begin{tabularx}{\textwidth}{
     p{10cm}
     >{\raggedleft\arraybackslash}X
@@ -65,6 +66,10 @@
     \textbf{#1} & \textbf{#4 - #5} \\
     \textit{#2} - \textbf{\textit{GPA: #3}} & \textit{#7} \\
     \multicolumn{2}{l}{\textit{#6}} \\
+    % \begin{itemize}
+    %   \foreachitem\bullet\in\bulletslist{\item \bullet\vspace{-0.3cm}}
+    % \end{itemize} \\
+    % \textit{#6} & \\
   \end{tabularx}
 }
 
@@ -155,15 +160,20 @@
 \job{Ball Aerospace}
 {June 2021}
 {Present}
-{RF Intern, Technical Aide}
+{RF Engineer, Intern, Technical Aide}
 {Broomfield, CO}
-{{Simulated, designed, and tested an RF Front-End PWB at extreme temperatures},{Built an embedded webpage used to interact with a phased array antenna},{Helped coworkers finish schematic and layout for their PWB’s},{High-power testing of real antenna loads}}
+{{Simulated, designed, and tested an RF Front-End PWB at extreme temperatures},
+  {Built an embedded webpage used to interact with a phased array antenna},
+  {Helped coworkers finish schematic and layout for their PWB’s},
+  {High-power testing of real antenna loads}}
 \job{Colorado State University}
 {Jan 2021}
 {May 2022}
 {Graduate Research Assistant}
 {Fort Collins, CO}
-{{Design, schematic, and layout of a modular, drone-mountable, X-band FMCW radar},{Signal processing and data visualization for Analog Device’s FMCW Phaser Board},{Work for the Phaser Board was presented at IMS 2022 and IEEE-APS 2022 workshops}}
+{{Design, schematic, and layout of a modular, X-band, FMCW drone radar},
+  {Signal processing / data visualization for Analog Device’s FMCW Phaser Board},
+  {Work for the Phaser Board was presented at IMS 2022 and IEEE-APS 2022}}
 \job{CHILL Radar Lab}
 {May 2020}
 {May 2021}
