@@ -36,14 +36,15 @@
 % - email
 % - linkedin
 % - github
-\newcommand{\name}[6]{
+\newcommand{\name}[7]{
   \begin{center}
     {\Huge \scshape \texttt{#1}} \\ \vspace{1mm}
     #2 \\ \vspace{1mm}
     \small \raisebox{-0.1\height}\faPhone \ \underline{#3} ~
     \href{mailto:#4}{\raisebox{-0.1\height} \faEnvelope \  \underline{#4}} ~
     \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedinSquare \  \underline{#5}} ~
-    \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}}
+    \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}} ~
+    \href{https://gitlab.com/#7}{\raisebox{-0.1\height} \faGitlab \  \underline{#7}}
   \end{center}\par
 }
 
@@ -63,8 +64,8 @@
     p{10cm}
     >{\raggedleft\arraybackslash}X
   }
-    \textbf{#1} & \textbf{#4 - #5} \\
-    \textit{#2} - \textbf{\textit{GPA: #3}} & \textit{#7} \\
+    \textbf{#1} & \textbf{#4 \textemdash \ #5} \\
+    \textit{#2} \textemdash \  \textbf{\textit{GPA: #3}} & \textit{#7} \\
     \multicolumn{2}{l}{\textit{#6}} \\
     % \begin{itemize}
     %   \foreachitem\bullet\in\bulletslist{\item \bullet\vspace{-0.3cm}}
@@ -88,14 +89,12 @@
     p{14.5cm}
     >{\raggedleft\arraybackslash}X
     }
-    \textbf{#1} & \textbf{#2} - \textbf{#3} \\
+    \textbf{#1} & \textbf{#2} \textemdash\  \textbf{#3} \\
     \textit{\underline{#4}} & \textit{#5} \\
     \vspace{-0.7cm}
-    % \multicolumn{2}{l}{
     \begin{itemize}
       \foreachitem\bullet\in\bulletslist{\item \bullet\vspace{-0.3cm}}
     \end{itemize} \\
-    % } \\
   \end{tabularx}
 }
 
@@ -110,10 +109,10 @@
   \readlist*\bulletslist{#4}
   \vspace{-1.5mm}
   \begin{tabularx}{\textwidth}{
-    p{14.5cm}
+    p{14cm}
     >{\raggedleft\arraybackslash}X
     }
-    \href{#5}{\underline{\textbf{#1}}} & \textbf{#2} - \textbf{#3} \\
+    \href{#5}{\underline{\textbf{#1}}} & \textbf{#2} \textemdash\ \textbf{#3} \\
     \vspace{-0.7cm}
     \begin{itemize}
       \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
@@ -134,7 +133,13 @@
 }
 
 \begin{document}
-\name{Marshall Bruner}{Denver, CO}{+1 970-568-6162}{brunerm99@gmail.com}{marshall-bruner}{brunerm99}
+\name{Marshall Bruner}
+{Denver, CO}
+{+1 970-568-6162}
+{brunerm99@gmail.com}
+{marshall-bruner}
+{brunerm99}
+{brunerm99}
 
 \vspace{-0.65cm}
 
@@ -158,7 +163,7 @@
 
 \section*{EXPERIENCE}
 \job{Ball Aerospace}
-{June 2021}
+{Jun. 2021}
 {Present}
 {RF Engineer, Intern, Technical Aide}
 {Broomfield, CO}
@@ -167,7 +172,7 @@
   {Helped coworkers finish schematic and layout for their PWB’s},
   {High-power testing of real antenna loads}}
 \job{Colorado State University}
-{Jan 2021}
+{Jan. 2021}
 {May 2022}
 {Graduate Research Assistant}
 {Fort Collins, CO}
@@ -185,19 +190,19 @@
 
 \section*{PROJECTS}
 \project{5G Electronics Senior Design Project}
-{Jun 2020}
+{Jun. 2020}
 {May 2021}
 {{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands},{Experience using FieldFox, EMPro, ADS, SystemVue}}
 {https://drive.google.com/file/d/1jnmEm4owg6Irm8_FP4LNQ6NCM40VRgA7/view?usp=sharing}
 \project{Fuzzy Logic Clutter Filter}
-{Nov 2020}
-{Dec 2020}
-{{Applied the machine learning technique, fuzzy logic, to radar data as a clutter filter}}
+{Nov. 2020}
+{Dec. 2020}
+{{Applied the Fuzzy Logic machine learning technique to radar data as a clutter filter}}
 {https://drive.google.com/file/d/1ZUYzztMVOXb6Fy5-VPBcrxMdchSZ3y8y/view}
 \project{Environment-Mapping Car}
-{Nov 2020}
-{Dec 2020}
-{Built and programmed DC powered car with attached ultrasonic sensor for mobile mapping of the surrounding environment}
+{Nov. 2020}
+{Dec. 2020}
+{Built and programmed battery-powered car with attached ultrasonic sensor for mobile mapping of the surrounding environment}
 {https://drive.google.com/file/d/1jjRZd7_2CnEgP2Gu1lF2XtPDVP_Ej0Gg/view}
 
 \vspace{-0.5cm}
@@ -207,10 +212,10 @@
 \skill{Communication}
 {Excellent Technical Communication and Presentation Skills, Experience Presenting PDR/CDRs, Technical Paper/Presentation Formatting}
 \skill{Languages}
-{Python, C, Matlab, SQL, Bash, JavaScript}
+{Python, C, SQL, Bash, Matlab, JavaScript}
+\skill{Technologies / Tools}
+{Git, \LaTeX, Linux, Docker, PostGreSQL/TimescaleDB, Flask, Benchtop measurement equipment}
 \skill{Design / Simulation Tools}
 {HFSS, KiCad, QucsStudio, LTSpice, Cadence Virtuoso}
-\skill{Technologies / Tools}
-{Git, \LaTeX, Linux, Benchtop measurement equipment}
 
 \end{document}
