@@ -5,7 +5,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fontawesome5} % cool emojis
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
 \usepackage{listofitems} % list of command arguments
@@ -44,7 +44,7 @@
     #2 \\ \vspace{1mm}
     \small \raisebox{-0.1\height}\faPhone \ \underline{#3} ~
     \href{mailto:#4}{\raisebox{-0.1\height} \faEnvelope \  \underline{#4}} ~
-    \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedinSquare \  \underline{#5}} ~
+    \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedin \  \underline{#5}} ~
     \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}} ~
     % \href{https://gitlab.com/#7}{\raisebox{-0.1\height} \faGitlab \  \underline{#7}}
   \end{center}\par
@@ -123,6 +123,27 @@
   \end{tabularx}
 }
 
+% Project
+% Arguments:
+% - project title
+% - date
+% - bullet points (comma-separated list)
+% - link to project
+\newcommand{\projectsingle}[4]{
+  \readlist*\bulletslist{#3}
+  \vspace{-1.5mm}
+  \begin{tabularx}{\textwidth}{
+    p{14cm}
+    >{\raggedleft\arraybackslash}X
+    }
+    \href{#4}{\underline{\textbf{#1}}} & \textbf{#2} \\
+    \vspace{-0.7cm}
+    \begin{itemize}
+      \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
+    \end{itemize}
+  \end{tabularx}
+}
+
 % Skill
 % Arguments:
 % - group
@@ -162,30 +183,29 @@
 
 \section*{EXPERIENCE}
 \job{Ball Aerospace}
-{Jun. 2021}
-{Present}
+{Jun 2021}
+{Jul 2023}
 {RF Engineer}
 {Broomfield, CO}
 {
-  {Debugged complex, mission-critical RF boards under strict time constraints},
+  {Designed and debugged multiple complex, mission-critical RF boards under strict time constraints},
   {Simulated, designed, and tested an RF Front-End PWB at extreme temperatures},
   {Schematic and layout of RF T/R systems (RF, digital, power), 
   antenna range test equipment, component testing coupons, etc.},
   {Used Python knowledge to create useful plotting and RF analysis tools},
-  {Built an embedded webpage used to interact with a phased array antenna},
+  {Built an embedded webpage used to control/monitor phased array electronics},
   {High sensitivity testing (noise, high power, etc.) of electonics}
 }
 \job{Colorado State University}
-{Jan. 2021}
+{Jan 2021}
 {May 2022}
 {Graduate Research Assistant | Thesis}
 {Fort Collins, CO}
 {
   {Design, schematic, and layout of a modular, X-band, FMCW drone radar},
   {Signal processing / data visualization for Analog Device’s FMCW Phaser Board},
-  {Presented the work at the IEEE Internation Phased Array Symposium},
-  {Phaser board work was presented by ADI at IMS 2022 and IEEE-APS 2022},
-  {Built a server to host and display real-time and historical radar data using PostGreSQL, Flask, Python}
+  {Presented the work at the IEEE International Phased Array Symposium},
+  {Phaser board work was presented by ADI at IMS 2022 and IEEE-APS 2022}
 }
 \job{CHILL Radar Lab}
 {May 2020}
@@ -193,7 +213,8 @@
 {Lab Assistant}
 {Greeley, CO}
 {
-  {Built a real-time radar display to easily display and animate radar data},
+  % {Built a real-time radar display to easily display and animate radar data},
+  {Built a server to host and display real-time and historical radar data using PostGreSQL, Flask, Python},
   {Performed characterizations and measurements of radar equipment}
 }
 
@@ -203,14 +224,14 @@
 \school{Colorado State University}
 {M.S. Electrical Engineering}
 {3.9}
-{Jan. 2021}
+{Jan 2021}
 {May 2022}
 {Thesis - Design, Deployment, and Cost Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}
 {Fort Collins, CO}
 \school{Colorado State University}
 {B.S. Electrical Engineering}
 {3.47}
-{Aug. 2017}
+{Aug 2017}
 {May 2021}
 {}
 {Fort Collins, CO}
@@ -218,33 +239,38 @@
 \vspace{-0.7cm}
 
 \section*{PROJECTS}
+\projectsingle{FMCW Radar Bootcamp}
+{Mar 2023}
+{{Helped develop a talk on FMCW radar for the 2022 AESS Radar Bootcamp}}
+{https://radar2023.ieee-radarconf.org/radar-boot-camp}
 \project{5G Electronics Senior Design Project}
-{Jun. 2020}
+{Jun 2020}
 {May 2021}
 {{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands},{Experience using FieldFox, EMPro, ADS, SystemVue}}
 {https://drive.google.com/file/d/1jnmEm4owg6Irm8_FP4LNQ6NCM40VRgA7/view?usp=sharing}
 \project{Fuzzy Logic Clutter Filter}
-{Nov. 2020}
-{Dec. 2020}
-{{Applied the Fuzzy Logic machine learning technique to radar data to filter clutter}}
+{Nov 2020}
+{Dec 2020}
+{{Applied the Fuzzy Logic machine learning technique as a radar clutter filter}}
 {https://drive.google.com/file/d/1ZUYzztMVOXb6Fy5-VPBcrxMdchSZ3y8y/view}
-\project{Environment-Mapping Car}
-{Nov. 2020}
-{Dec. 2020}
-{Built and programmed a battery-powered car with attached ultrasonic sensor for mobile mapping of the surrounding environment}
-{https://drive.google.com/file/d/1jjRZd7_2CnEgP2Gu1lF2XtPDVP_Ej0Gg/view}
+% \project{Environment-Mapping Car}
+% {Nov. 2020}
+% {Dec. 2020}
+% {Built and programmed a battery-powered car with attached ultrasonic sensor for mobile mapping of the surrounding environment}
+% {https://drive.google.com/file/d/1jjRZd7_2CnEgP2Gu1lF2XtPDVP_Ej0Gg/view}
 
 \vspace{-0.5cm}
 
 \section*{SKILLS \& ABILITIES}
 \vspace{-0.2cm}
 \skill{Languages}
-{Python, C, Bash, SQL, Matlab, JavaScript, HTML, CSS}
+{Python, Rust, C, Bash, SQL, Matlab, NuShell, JavaScript, HTML, CSS}
 \skill{Design / Simulation Tools}
 {KiCad, AWR Microwave Office, HFSS, QucsStudio, LTSpice, Cadence Virtuoso}
 \skill{Technologies / Tools}
 {Git, \LaTeX, Linux, Docker, PostGreSQL/TimescaleDB, Flask, Celery (Distributed Tasks)}
 \skill{Communication}
 {Excellent Technical Communication and Presentation Skills, Experience Presenting PDR/CDRs, Technical Paper/Presentation Formatting, Concise Code Documentation}
+% \skill{Interesting Fact}{Traveled to 16 countries in the past year.}
 
 \end{document}
