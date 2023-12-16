@@ -5,7 +5,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fontawesome5} % cool emojis
-\RequirePackage{fontawesome}
+% \RequirePackage{fontawesome}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
 \usepackage{listofitems} % list of command arguments
@@ -44,7 +44,7 @@
     #2 \\ \vspace{1mm}
     \small \raisebox{-0.1\height}\faPhone \ \underline{#3} ~
     \href{mailto:#4}{\raisebox{-0.1\height} \faEnvelope \  \underline{#4}} ~
-    \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedinSquare \  \underline{#5}} ~
+    \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedin \  \underline{#5}} ~
     \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}} ~
     % \href{https://gitlab.com/#7}{\raisebox{-0.1\height} \faGitlab \  \underline{#7}}
   \end{center}\par
@@ -68,13 +68,30 @@
   }
     \textbf{#1} & \textbf{#4 \textemdash \ #5} \\
     \textit{#2} \textemdash \  \textbf{\textit{GPA: #3}} & \textit{#7} \\
-    \multicolumn{2}{l}{\textit{#6}} \\
+    \textit{#6} \\
+    % \multicolumn{2}{l}{\textit{#6}} \\
     % \begin{itemize}
     %   \foreachitem\bullet\in\bulletslist{\item \bullet\vspace{-0.3cm}}
     % \end{itemize} \\
     % \textit{#6} & \\
   \end{tabularx}
 }
+% \newcommand{\school}[7]{
+%   \vspace{-1.5mm}
+%   % \readlist*\bulletslist{#6}
+%   \begin{tabularx}{\textwidth}{
+%     p{10cm}
+%     >{\raggedleft\arraybackslash}X
+%   }
+%     \textbf{#1} & \textbf{#4 \textemdash \ #5} \\
+%     \textit{#2} \textemdash \  \textbf{\textit{GPA: #3}} & \textit{#7} \\
+%     \multicolumn{2}{l}{\textit{#6}} \\
+%     % \begin{itemize}
+%     %   \foreachitem\bullet\in\bulletslist{\item \bullet\vspace{-0.3cm}}
+%     % \end{itemize} \\
+%     % \textit{#6} & \\
+%   \end{tabularx}
+% }
 
 % Job
 % Arguments:
@@ -143,20 +160,6 @@
 {brunerm99}
 % {brunerm99}
 
-\vspace{-0.65cm}
-
-\section*{OBJECTIVE}
-\vspace{-0.2cm}
-% I am pursuing a transition into the Data Science industry.
-% My motivation has pushed me to learn the necessary tools and apply them to personal projects alongside my demanding job in the aerospace industry.
-% I believe my expertise as an RF engineer, specifically in the signal processing field, gives me an interesting perspective to contribute to a team.
-
-I am pursuing a transition to a software-centered role.
-My experience in this area ranges from writing firmware for electronics used in flight to 
-configuring webservers for radar data visualization and analysis.
-I would like to use this experience as a baseline for contributing to a team and 
-developing my skills further.
- 
 \vspace{-0.3cm}
 
 \section*{EXPERIENCE}
@@ -172,17 +175,20 @@ developing my skills further.
   {Built an embedded webpage used to interact with a phased array antenna},
   {High sensitivity testing (noise, high power, etc.) of electonics}
 }
-\job{Colorado State University}
+\job{{\href[]{https://scholar.google.com/citations?user=f_bJPcEAAAAJ&hl=en}{Colorado State University}}}
 {Jan. 2021}
 {May 2022}
-{Graduate Research Assistant | Thesis}
+{\href[]
+  {https://scholar.google.com/citations?view_op=view_citation&hl=en&user=f_bJPcEAAAAJ&citation_for_view=f_bJPcEAAAAJ:u5HHmVD_uO8C}
+  {Graduate Research Assistant | Thesis}
+}
 {Fort Collins, CO}
 {
+  {Built a server to host and display real-time / historical radar data using PostGreSQL, Flask, Python},
   {Design, schematic, and layout of a modular, X-band, FMCW drone radar},
   {Signal processing / data visualization for Analog Device’s FMCW Phaser Board},
   {Presented the work at the IEEE Internation Phased Array Symposium},
-  {Phaser board work was presented by ADI at IMS 2022 and IEEE-APS 2022},
-  {Built a server to host and display real-time and historical radar data using PostGreSQL, Flask, Python}
+  {Phaser board work was presented by ADI at IMS 2022 and IEEE-APS 2022}
 }
 \job{CHILL Radar Lab}
 {May 2020}
@@ -197,12 +203,15 @@ developing my skills further.
 \vspace{-0.5cm}
 
 \section*{EDUCATION}
-\school{Colorado State University}
+\school{{\href[]{https://scholar.google.com/citations?user=f_bJPcEAAAAJ&hl=en}{Colorado State University}}}
 {M.S. Electrical Engineering}
 {3.9}
 {Jan. 2021}
 {May 2022}
-{Thesis - Design, Deployment, and Cost Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}
+{{\href[]
+{https://scholar.google.com/citations?view_op=view_citation&hl=en&user=f_bJPcEAAAAJ&citation_for_view=f_bJPcEAAAAJ:u5HHmVD_uO8C}
+{Thesis - Design, Deployment, and Cost Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar}}
+}
 {Fort Collins, CO}
 \school{Colorado State University}
 {B.S. Electrical Engineering}
@@ -215,28 +224,34 @@ developing my skills further.
 \vspace{-0.7cm}
 
 \section*{PROJECTS}
+\project{Algorithmic Stock Trading Server}
+{Aug 2022}
+{Present}
+{
+  {Task scheduling system (backfilling data into PostGreSQL database, computing custom indicators, run entry / exit strategy)},
+  {Containerized using docker},
+  {Command-line interface for checking status, getting recent trades, etc.},
+  {Discord bot for general notifications / monitoring},
+  {Dashboard using Plotly Dash and a Flask API (early stages)}
+}
+{}
 \project{5G Electronics Senior Design Project}
 {Jun. 2020}
 {May 2021}
-{{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands},{Experience using FieldFox, EMPro, ADS, SystemVue}}
+{{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands}}
 {https://drive.google.com/file/d/1jnmEm4owg6Irm8_FP4LNQ6NCM40VRgA7/view?usp=sharing}
 \project{Fuzzy Logic Clutter Filter}
 {Nov. 2020}
 {Dec. 2020}
 {{Applied the Fuzzy Logic machine learning technique to radar data to filter clutter}}
 {https://drive.google.com/file/d/1ZUYzztMVOXb6Fy5-VPBcrxMdchSZ3y8y/view}
-\project{Environment-Mapping Car}
-{Nov. 2020}
-{Dec. 2020}
-{Built and programmed a battery-powered car with attached ultrasonic sensor for mobile mapping of the surrounding environment}
-{https://drive.google.com/file/d/1jjRZd7_2CnEgP2Gu1lF2XtPDVP_Ej0Gg/view}
 
 \vspace{-0.5cm}
 
 \section*{SKILLS \& ABILITIES}
 \vspace{-0.2cm}
 \skill{Languages}
-{Python, C, Bash, SQL, Matlab, JavaScript, HTML, CSS}
+{Python, C, Rust, Bash, SQL, NuShell, Matlab, JavaScript, HTML, CSS}
 \skill{Technologies / Tools}
 {Git, \LaTeX, Linux, Docker, PostGreSQL/TimescaleDB, Flask, Celery (Distributed Tasks)}
 \skill{Communication}
