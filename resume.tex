@@ -139,6 +139,21 @@
   \end{tabularx}
 }
 
+\newcommand{\projectsingle}[4]{
+  \readlist*\bulletslist{#3}
+  \vspace{-1.5mm}
+  \begin{tabularx}{\textwidth}{
+    p{14cm}
+    >{\raggedleft\arraybackslash}X
+    }
+    \href{#4}{\underline{\textbf{#1}}} & \textbf{#2} \\
+    \vspace{-0.7cm}
+    \begin{itemize}
+      \foreachitem\bullet\in\bulletslist{\item \bullet \vspace{-0.3cm}}
+    \end{itemize}
+  \end{tabularx}
+}
+
 % Skill
 % Arguments:
 % - group
@@ -235,16 +250,20 @@
   {Dashboard using Plotly Dash and a Flask API (early stages)}
 }
 {}
+\projectsingle{FMCW Radar Bootcamp}
+{Mar 2023}
+{{Helped develop a talk on FMCW radar and corresponding software for the 2022 AESS Radar Bootcamp}}
+{https://radar2023.ieee-radarconf.org/radar-boot-camp}
 \project{5G Electronics Senior Design Project}
 {Jun 2020}
 {May 2021}
 {{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands}}
 {https://drive.google.com/file/d/1jnmEm4owg6Irm8_FP4LNQ6NCM40VRgA7/view?usp=sharing}
-\project{Fuzzy Logic Clutter Filter}
-{Nov 2020}
-{Dec 2020}
-{{Applied the Fuzzy Logic machine learning technique to radar data to filter clutter}}
-{https://drive.google.com/file/d/1ZUYzztMVOXb6Fy5-VPBcrxMdchSZ3y8y/view}
+% \project{Fuzzy Logic Clutter Filter}
+% {Nov 2020}
+% {Dec 2020}
+% {{Applied the Fuzzy Logic machine learning technique to radar data to filter clutter}}
+% {https://drive.google.com/file/d/1ZUYzztMVOXb6Fy5-VPBcrxMdchSZ3y8y/view}
 
 \vspace{-0.5cm}
 
