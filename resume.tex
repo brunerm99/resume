@@ -10,6 +10,8 @@
 \usepackage{tabularx}
 \usepackage{listofitems} % list of command arguments
 \usepackage{sectsty} % section formatting
+\usepackage{xcolor}
+\usepackage{soul}
 % \usepackage{fontspec}
 % \setmonofont{JetBrains Mono}[Contextuals=Alternate]
 
@@ -30,6 +32,8 @@
     \sectionrule{0pt}{0pt}{-5pt}{0.5pt}
 }
 
+\DeclareRobustCommand{\boldblue}[1]{{\textcolor{blue}{\textbf{#1}}}}
+
 % Name
 % Arguments:
 % - name
@@ -47,6 +51,25 @@
     \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedin \  \underline{#5}} ~
     \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}} ~
     % \href{https://gitlab.com/#7}{\raisebox{-0.1\height} \faGitlab \  \underline{#7}}
+  \end{center}\par
+}
+
+% Name - no location
+% Arguments:
+% - name
+% - address
+% - phone number
+% - email
+% - linkedin
+% - github
+\newcommand{\namenoloc}[6]{
+  \begin{center}
+    {\Huge \scshape \texttt{#1}} \\ \vspace{4mm}
+    \small \raisebox{-0.1\height}\faPhone \ \underline{#2} ~
+    \href{mailto:#3}{\raisebox{-0.1\height} \faEnvelope \  \underline{#3}} ~
+    \href{https://linkedin.com/in/#4}{\raisebox{-0.1\height} \faLinkedin \  \underline{#4}} ~
+    \href{https://github.com/#5}{\raisebox{-0.1\height} \faGithub \  \underline{#5}} ~
+    % \href{https://gitlab.com/#6}{\raisebox{-0.1\height} \faGitlab \  \underline{#6}}
   \end{center}\par
 }
 
@@ -149,16 +172,13 @@
 % - group
 % - skills (comma-separated list)
 \newcommand{\skill}[2]{
-  \begin{tabularx}{\textwidth}{
-    X
-    }
+  \begin{tabularx}{\textwidth}{>{\raggedright}X}
     \textbf{#1:} #2
   \end{tabularx}
 }
 
 \begin{document}
-\name{Marshall Bruner}
-{Denver, CO}
+\namenoloc{Marshall Bruner}
 {+1 970-568-6162}
 {brunerm99@gmail.com}
 {marshall-bruner}
@@ -182,7 +202,7 @@
 \vspace{-0.3cm}
 
 \section*{EXPERIENCE}
-\job{Ball Aerospace}
+\job{Ball Aerospace (\boldblue{DoD Clearance})}
 {Jun 2021}
 {Jul 2023}
 {RF Engineer}
@@ -190,9 +210,9 @@
 {
   {Designed and debugged multiple complex, mission-critical RF boards under strict time constraints},
   {Simulated, designed, and tested an RF Front-End PWB at extreme temperatures},
-  {Schematic and layout of RF T/R systems (RF, digital, power), 
+  {\boldblue{Schematic capture and layout} of RF T/R systems (RF, digital, power), 
   antenna range test equipment, component testing coupons, etc.},
-  {Used Python knowledge to create useful plotting and RF analysis tools},
+  {Built data visualization and analysis tools in \boldblue{Python}},
   {Built an embedded webpage used to control/monitor phased array electronics},
   {High sensitivity testing (noise, high power, etc.) of electonics}
 }
@@ -202,7 +222,7 @@
 {Graduate Research Assistant | Thesis}
 {Fort Collins, CO}
 {
-  {Design, schematic, and layout of a modular, X-band, FMCW drone radar},
+  {\boldblue{Design, schematic, and layout} of a modular, X-band, FMCW drone radar},
   {Signal processing / data visualization for Analog Device’s FMCW Phaser Board},
   {Presented the work at the IEEE International Phased Array Symposium},
   {Phaser board work was presented by ADI at IMS 2022 and IEEE-APS 2022}
@@ -241,12 +261,16 @@
 \section*{PROJECTS}
 \projectsingle{FMCW Radar Bootcamp}
 {Mar 2023}
-{{Helped develop a talk on FMCW radar and corresponding software for the 2022 AESS Radar Bootcamp}}
+{{Developed a presentation on FMCW radar and corresponding software for the 2022 AESS Radar Bootcamp}}
 {https://radar2023.ieee-radarconf.org/radar-boot-camp}
 \project{5G Electronics Senior Design Project}
 {Jun 2020}
 {May 2021}
-{{Simulated, assembled, and measured a full 5G receiver system},{Created teaching documentation for a 5G transmitter and receiver for FR1 and FR2 frequency bands},{Experience using FieldFox, EMPro, ADS, SystemVue}}
+{
+  {Simulated, assembled, and measured a full 5G receiver system},
+  {\boldblue{Created teaching documentation} for a 5G transmitter and receiver for FR1 and FR2 frequency bands},
+  {Experience using FieldFox, EMPro, ADS, SystemVue}
+}
 {https://drive.google.com/file/d/1jnmEm4owg6Irm8_FP4LNQ6NCM40VRgA7/view?usp=sharing}
 \project{Fuzzy Logic Clutter Filter}
 {Nov 2020}
@@ -264,13 +288,13 @@
 \section*{SKILLS \& ABILITIES}
 \vspace{-0.2cm}
 \skill{Languages}
-{Python, Rust, C, Bash, SQL, Matlab, NuShell, JavaScript, HTML, CSS}
+{\boldblue{Python}, Rust, C, Bash, SQL, Matlab, NuShell, JavaScript, HTML, CSS}
 \skill{Design / Simulation Tools}
-{KiCad, AWR Microwave Office, HFSS, QucsStudio, LTSpice, Cadence Virtuoso}
+{\boldblue{KiCad}, AWR Microwave Office, HFSS, \boldblue{AutoCAD}, QucsStudio, LTSpice, Cadence Virtuoso}
 \skill{Technologies / Tools}
-{Git, \LaTeX, Linux, Docker, PostGreSQL/TimescaleDB, Flask, Celery (Distributed Tasks)}
+{\boldblue{Git}, \LaTeX, Linux, Docker, PostGreSQL, Flask, Celery}
 \skill{Communication}
-{Excellent Technical Communication and Presentation Skills, Experience Presenting PDR/CDRs, Technical Paper/Presentation Formatting, Concise Code Documentation}
+{Excellent \boldblue{Technical Communication and Presentation Skills}, Experience Presenting PDR/CDRs, \boldblue{Technical Paper/Presentation Formatting}, Concise Code Documentation}
 % \skill{Interesting Fact}{Traveled to 16 countries in the past year.}
 
 \end{document}
