@@ -32,6 +32,9 @@
     \sectionrule{0pt}{0pt}{-5pt}{0.5pt}
 }
 
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}}
+\DeclareRobustCommand{\boldblue}[1]{{\textcolor{blue}{\textbf{#1}}}}
+
 % Name
 % Arguments:
 % - name
@@ -49,6 +52,25 @@
     \href{https://linkedin.com/in/#5}{\raisebox{-0.1\height} \faLinkedin \  \underline{#5}} ~
     \href{https://github.com/#6}{\raisebox{-0.1\height} \faGithub \  \underline{#6}} ~
     % \href{https://gitlab.com/#7}{\raisebox{-0.1\height} \faGitlab \  \underline{#7}}
+  \end{center}\par
+}
+
+% Name - no location
+% Arguments:
+% - name
+% - address
+% - phone number
+% - email
+% - linkedin
+% - github
+\newcommand{\namenoloc}[6]{
+  \begin{center}
+    {\Huge \scshape \texttt{#1}} \\ \vspace{4mm}
+    \small \raisebox{-0.1\height}\faPhone \ \underline{#2} ~
+    \href{mailto:#3}{\raisebox{-0.1\height} \faEnvelope \  \underline{#3}} ~
+    \href{https://linkedin.com/in/#4}{\raisebox{-0.1\height} \faLinkedin \  \underline{#4}} ~
+    \href{https://github.com/#5}{\raisebox{-0.1\height} \faGithub \  \underline{#5}} ~
+    % \href{https://gitlab.com/#6}{\raisebox{-0.1\height} \faGitlab \  \underline{#6}}
   \end{center}\par
 }
 
@@ -169,8 +191,8 @@
 }
 
 \begin{document}
-\name{Marshall Bruner}
-{Denver, CO}
+\namenoloc{Marshall Bruner}
+% {Denver, CO}
 {+1 970-568-6162}
 {brunerm99@gmail.com}
 {marshall-bruner}
@@ -180,14 +202,14 @@
 \vspace{-0.3cm}
 
 \section*{EXPERIENCE}
-\job{Ball Aerospace}
+\job{Ball Aerospace (\boldblue{DoD Clearance})}
 {Jun 2021}
 {Jul 2023}
 {RF Engineer}
 {Broomfield, CO}
 {
-  {Used Python knowledge to create useful plotting and RF analysis tools},
-  {Simulated, designed, and tested an RF Front-End PWB at extreme temperatures},
+  {Built data visualization (\boldblue{Matplotlib}, \boldblue{Plotly}) and analysis tools in \boldblue{Python}},
+  {Simulated, designed, and tested an RF Front-End PCB at extreme temperatures},
   {Debugged complex, mission-critical RF boards under strict time constraints},
   {Built an embedded webpage used to interact with a phased array antenna},
   {High sensitivity testing (noise, high power, etc.) of electonics}
@@ -201,7 +223,7 @@
 }
 {Fort Collins, CO}
 {
-  {Built a server to host and display real-time / historical radar data using PostGreSQL, Flask, Python},
+  {Built a server to host and display real-time / historical radar data using \boldblue{PostGreSQL}, \boldblue{Flask}, \boldblue{Python}},
   {Design, schematic, and layout of a modular, X-band, FMCW drone radar},
   {Signal processing / data visualization for Analog Device’s FMCW Phaser Board},
   {Presented the work at the IEEE Internation Phased Array Symposium},
@@ -245,12 +267,12 @@
 {Aug 2022}
 {Present}
 {
-  {Task scheduling system (backfilling data into PostGreSQL database, computing custom indicators, run entry / exit strategy)},
+  {Task scheduling system (backfilling data into \boldblue{PostGreSQL} database, computing custom indicators, run entry / exit strategy)},
   {Containerized using docker},
   {Command-line interface for checking status, getting recent trades, etc.},
-  {Analysis / forecasting using Pandas, Numpy, PyTorch},
+  {Analysis / forecasting using \boldblue{Pandas}, \boldblue{Numpy}, \boldblue{PyTorch}},
   % {Discord bot for general notifications / monitoring},
-  {Dashboard using Plotly Dash and a Flask API}
+  {Dashboard using \boldblue{Plotly Dash} and a \boldblue{Flask} API}
 }
 {}
 \projectsingle{FMCW Radar Bootcamp}
@@ -273,9 +295,9 @@
 \section*{SKILLS \& ABILITIES}
 \vspace{-0.2cm}
 \skill{Languages}
-{Python, C, Rust, Bash, SQL, NuShell, Matlab, JavaScript}
+{\boldblue{Python}, C, Rust, Bash, \boldblue{SQL}, NuShell, Matlab, JavaScript}
 \skill{Technologies / Tools}
-{Git, Linux, Docker, PostGreSQL/TimescaleDB, Pandas, Numpy, Flask, Celery}
+{\boldblue{Git}, \boldblue{Linux}, \boldblue{Docker}, \boldblue{PostGreSQL}, \boldblue{SQLite}, \boldblue{Pandas}, \boldblue{Numpy}, Flask, Celery}
 \skill{Communication}
 {Excellent Technical Communication and Presentation Skills, Experience Presenting PDR/CDRs, Technical Paper/Presentation Formatting, Concise Code Documentation}
 % \skill{Design / Simulation Tools}
