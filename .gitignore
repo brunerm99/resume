@@ -23,4 +23,4 @@
 *.synctex.gz
 .auctex-auto
 
-outputs/
+# outputs/
