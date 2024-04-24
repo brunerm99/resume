@@ -19,7 +19,7 @@ export def open-viewer [] -> bool {
   if (ps | where name == (which pueued | get path.0) | is-empty) { pueued -d }
   let output_path = (get-output-path)
   if ($output_path | path exists) { 
-    pueue add okular $output_path 
+    pueue add --immediate okular $output_path 
     true
   } else {
     print $"Failed to open ($output_path), try compiling first"
