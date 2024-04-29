@@ -21,7 +21,7 @@ export def open-viewer [] -> bool {
   let output_path = (get-output-path | path join $"($FNAME).pdf")
   if ($output_path | path exists) { 
     print $output_path
-    pueue add okular $output_path 
+    pueue add --immediate okular $output_path 
     true
   } else {
     print $"Failed to open ($output_path), try compiling first"
