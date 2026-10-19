@@ -130,30 +130,31 @@
 
 #v(1mm)
 #align(center)[
-  _RF hardware, signal processing, and weather radar deployment | Teaching 50k+ engineers on YouTube_
+  _RF hardware, signal processing, and deployment | Teaching 50k+ engineers on YouTube_
 ]
 
 = EXPERIENCE
 
 #job("Rainmaker Technology Corporation", "Aug 2025", "Oct 2026", "Head Radar Systems Engineer", "Boulder, CO", (
-  [#highlight[Led radar engineering for a cloud-seeding company] across S-, X-, and K-band systems],
+  [#highlight[Led radar engineering team building in-house weather radars] across S-, X-, and K-band systems],
   [#highlight[Designed a 24 GHz FMCW cloud-profiling radar] from RF architecture through PCB layout, fab, and bring-up],
-  [Built its FPGA gateware, embedded control server, and signal processing pipeline],
   [#highlight[Operated and deployed a 25 kW X-band dual-pol weather radar], including a mountain-top installation],
-  [Architected a solid-state pulse-compression X-band radar and built radar siting and performance-modeling tools],
+  [Built embedded control server, and signal processing pipeline],
+  [Performed global radar analysis (incl. building internal tools) for BD team],
 ))
 
 #job("CSU-CHILL National Radar Facility", "Jan 2025", "Present", "Radar Systems Engineer (part-time)", "Greeley, CO", (
-  [#highlight[Built the facility's real-time multi-radar web display], serving 8 radars and 14 polarimetric products],
+  [#highlight[Built the facility's real-time multi-radar web display], serving 8+ radars],
   [#highlight[Wrote the antenna positioner controller for a solid-state C-band radar], from pedestal protocol to operator UI],
-  [Maintained an X-band dual-pol signal processing chain and authored its operational scan patterns],
-  [Supported relocation and re-commissioning of a dual-pol S-band weather radar at Kwajalein Atoll],
+  // [Maintained an X-band dual-pol signal processing chain and authored its operational scan patterns],
+  [Relocated and re-commissioned a dual-pol S-band weather radar at Kwajalein Atoll, Marshall Islands],
 ))
 
 #job([BAE Systems (#highlight[DoD Clearance])], "Jul 2024", "Jul 2025", "RF Engineer", "Westminster, CO", (
-  [#highlight[System design, schematic capture, and layout of a 2D active phased array weather radar]],
-  [Large-scale phased array systems analysis],
-  [Technical consultant on weather radar proposals],
+  [#highlight[Designed, laid out, and brought up RF boards for electronic warfare systems], from system design onward],
+  [#highlight[Designed a 2D active phased array weather radar], from system architecture to schematic and layout],
+  [Analyzed large-scale phased array systems],
+  [Consulted on weather radar proposals],
 ))
 
 #job([Ball Aerospace (#highlight[DoD Clearance])], "Jun 2021", "Jul 2023", "RF Engineer", "Westminster, CO", (
