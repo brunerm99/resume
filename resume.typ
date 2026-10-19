@@ -1,15 +1,4 @@
 // Marshall Bruner's resume
-//
-// HOW TO EDIT
-// - Each entry is one function call: job, project, project-single, school, skill.
-// - Bullets are an array of content blocks: ( [first], [second], ).
-//   Commas inside a bullet are fine. Keep the trailing comma.
-// - Spacing is handled by the functions; don't sprinkle v() between entries.
-// - Entry headers stick to their bullets, so they never orphan at a page bottom.
-// - highlight[...] marks key phrases; switch its definition below to turn it on.
-//
-// Compile once:   typst compile resume.typ
-// Live preview:   typst watch resume.typ   (then open resume.pdf in a viewer that reloads)
 
 // ---------- Highlight: pick one ----------
 #let highlight(body) = body                              // off (plain text)
@@ -130,7 +119,7 @@
 
 #v(1mm)
 #align(center)[
-  _RF hardware, signal processing, and deployment | Teaching 50k+ engineers on YouTube_
+  _RF hardware, signal processing, and deployment --- Teaching 50k+ engineers on YouTube_
 ]
 
 = EXPERIENCE
@@ -139,11 +128,11 @@
   [#highlight[Led radar engineering team building in-house weather radars] across S-, X-, and K-band systems],
   [#highlight[Designed a 24 GHz FMCW cloud-profiling radar] from RF architecture through PCB layout, fab, and bring-up],
   [#highlight[Operated and deployed a 25 kW X-band dual-pol weather radar], including a mountain-top installation],
-  [Built embedded control server, and signal processing pipeline],
+  [Built the embedded control server and signal processing pipeline],
   [Performed global radar analysis (incl. building internal tools) for BD team],
 ))
 
-#job("CSU-CHILL National Radar Facility", "Jan 2025", "Present", "Radar Systems Engineer (part-time)", "Greeley, CO", (
+#job("CSU-CHILL Radar Facility", "Jan 2025", "Present", "Radar Systems Engineer (part-time)", "Greeley, CO", (
   [#highlight[Built the facility's real-time multi-radar web display], serving 8+ radars],
   [#highlight[Wrote the antenna positioner controller for a solid-state C-band radar], from pedestal protocol to operator UI],
   // [Maintained an X-band dual-pol signal processing chain and authored its operational scan patterns],
@@ -151,7 +140,7 @@
 ))
 
 #job([BAE Systems (#highlight[DoD Clearance])], "Jul 2024", "Jul 2025", "RF Engineer", "Westminster, CO", (
-  [#highlight[Designed, laid out, and brought up RF boards for electronic warfare systems], from system design onward],
+  [#highlight[Designed (system architecture, schematic, layout) and brought up RF/digital/power boards for EW systems]],
   [#highlight[Designed a 2D active phased array weather radar], from system architecture to schematic and layout],
   [Analyzed large-scale phased array systems],
   [Consulted on weather radar proposals],
@@ -164,13 +153,13 @@
   [Built an embedded webpage to control and monitor phased array electronics],
 ))
 
-#job("Colorado State University", "Jan 2021", "May 2022", "Graduate Research Assistant | Thesis focused on Radar", "Fort Collins, CO", (
+#job("Colorado State University", "Jan 2021", "May 2022", "Graduate Research Assistant --- Thesis focused on Radar", "Fort Collins, CO", (
   [#highlight[Designed and laid out a modular X-band FMCW drone radar]],
   [#highlight[Signal processing and visualization] for Analog Devices' FMCW Phaser board, shown by ADI at IMS 2022],
   [Presented at the IEEE International Symposium on Phased Array Systems and Technology],
 ))
 
-#job("CSU-CHILL Radar Lab", "May 2020", "May 2021", "Lab Assistant", "Greeley, CO", (
+#job("CSU-CHILL Radar Facility", "May 2020", "May 2021", "Lab Assistant", "Greeley, CO", (
   [Built a server to host and display real-time and historical radar data],
   [Characterized and measured radar equipment],
 ))
@@ -178,9 +167,9 @@
 = PROJECTS
 
 #project("Marshall Bruner RF — Radar / RF Education YouTube Channel", "Aug 2023", "Present", (
-  [#highlight[53k subscribers and 1.4M+ views] across 17 animated videos on radar, phased arrays, and signal processing],
-  [Write, animate, narrate, and edit every video; built a reusable radar animation library],
-  [Ship companion interactive notebooks and a 3D weather-radar animation tool],
+  [#highlight[50k+ subscribers and 1.4M+ views] on videos covering radar, phased arrays, and signal processing],
+  [Write, animate, narrate, and edit every video],
+  [Ship companion interactive notebooks and other learning resources],
 ), url: "https://www.youtube.com/@MarshallBrunerRF")
 
 #project-single("FMCW Radar Bootcamp — IEEE AESS RadarConf", "Mar 2023", (
@@ -190,14 +179,14 @@
 = EDUCATION
 
 #school("Colorado State University", "M.S. Electrical Engineering", "3.9", "Jan 2021", "May 2022", "Fort Collins, CO",
-  note: "Thesis - Design, Deployment, and Cost Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar")
+  note: "Thesis — Design, Deployment, and Cost Considerations for DARMA; A Low-Cost and Lightweight FMCW Radar")
 
 #school("Colorado State University", "B.S. Electrical Engineering", "3.47", "Aug 2017", "May 2021", "Fort Collins, CO")
 
 = SKILLS & ABILITIES
 
-#skill("Radar / RF", [FMCW and pulsed radar design, pulse compression, dual-pol polarimetry, phased arrays, link budgets, Doppler processing, weather radar operations])
-#skill("Languages", [Python (NumPy, SciPy, Pandas, PyTorch, FastAPI, Flask), Rust, Go, C / C++, SystemVerilog, Bash, SQL, Matlab, TypeScript])
+#skill("Radar / RF", [FMCW and pulsed radar design, pulse compression, phased arrays, link budgets, Doppler processing, weather radar operations, $dots$])
+#skill("Languages", [Python (NumPy, SciPy, Pandas, FastAPI, Flask), Rust, Go, C / C++, SystemVerilog, Bash, SQL, Matlab, TypeScript])
 #skill("Design / Simulation Tools", [KiCad, AWR Microwave Office, HFSS, ADS, LTSpice, Cadence, QucsStudio, Vivado])
-#skill("Lab / Infrastructure", [VNA, spectrum analyzer, oscilloscope, noise figure and high-power test; Git, Linux, Docker, PostgreSQL, Tailscale, LaTeX, Manim])
+#skill("Lab / Infrastructure", [VNA, spectrum analyzer, oscilloscope, noise figure and high-power test; Git, Linux, Docker, PostgreSQL, Tailscale, LaTeX, Manim, $dots$])
 #skill("Communication", [Technical presentations and design reviews (PDR / CDR), customer pre- and post-sales support, educational content reaching 50k+ engineers])
