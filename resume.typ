@@ -136,54 +136,54 @@
 = EXPERIENCE
 
 #job("Rainmaker Technology Corporation", "Aug 2025", "Oct 2026", "Head Radar Systems Engineer", "Boulder, CO", (
-  [#highlight[Led radar engineering for a cloud-seeding company]: set S-, X-, and K-band sensor strategy and owned radar hardware, FPGA / embedded software, signal processing, and deployment tooling],
-  [#highlight[Designed a 24 GHz FMCW cloud-profiling radar transceiver] (8-layer Rogers PCB, 450+ components, KiCad) from architecture through fab and bring-up, including a bistatic redesign for 15+ dB sensitivity gain and GaN PA bias sequencing],
-  [Owned its software stack: SystemVerilog gateware on Zynq UltraScale+ (PLL control, LVDS ADC capture, DMA), C++ control server, Python capture and Doppler processing pipeline, and SCPI-automated bench characterization],
-  [#highlight[Operated and deployed a 25 kW X-band dual-pol scanning weather radar]: scan-control and monitoring service with Slack / SNMP alerting, remote networking, and a mountain-top installation],
-  [Architected a solid-state pulse-compression X-band dual-pol successor radar (transceiver design, PA trade study, sensitivity budget, business case) and built terrain-aware coverage-planning and radar performance-modeling tools used to site radars in 12 program regions],
+  [#highlight[Led radar engineering for a cloud-seeding company] across S-, X-, and K-band systems],
+  [#highlight[Designed a 24 GHz FMCW cloud-profiling radar] from RF architecture through PCB layout, fab, and bring-up],
+  [Built its FPGA gateware, embedded control server, and signal processing pipeline],
+  [#highlight[Operated and deployed a 25 kW X-band dual-pol weather radar], including a mountain-top installation],
+  [Architected a solid-state pulse-compression X-band radar and built radar siting and performance-modeling tools],
 ))
 
 #job("CSU-CHILL National Radar Facility", "Jan 2025", "Present", "Radar Systems Engineer (part-time)", "Greeley, CO", (
-  [#highlight[Built the facility's multi-radar web display] (Flask, OpenLayers, PostgreSQL, Docker) serving real-time and historical PPI / RHI views for 8 radars and 14 polarimetric products, with client-side GPU rendering and a multi-layer cache],
-  [#highlight[Wrote the antenna positioner controller for a solid-state C-band radar] in Go: reverse-implemented the pedestal's binary UDP protocol, PPI / RHI scan planner and queue, operator web UI, and CLI],
-  [Maintained an X-band dual-pol signal processing chain in C (time series to moments to CF-Radial NetCDF to polarimetric products) and authored its operational volume coverage patterns],
-  [Supported relocation and re-commissioning of a dual-pol S-band weather radar at Reagan Test Site, Kwajalein Atoll: bring-up procedure, calibration verification, and a live monitoring dashboard],
+  [#highlight[Built the facility's real-time multi-radar web display], serving 8 radars and 14 polarimetric products],
+  [#highlight[Wrote the antenna positioner controller for a solid-state C-band radar], from pedestal protocol to operator UI],
+  [Maintained an X-band dual-pol signal processing chain and authored its operational scan patterns],
+  [Supported relocation and re-commissioning of a dual-pol S-band weather radar at Kwajalein Atoll],
 ))
 
 #job([BAE Systems (#highlight[DoD Clearance])], "Jul 2024", "Jul 2025", "RF Engineer", "Westminster, CO", (
   [#highlight[System design, schematic capture, and layout of a 2D active phased array weather radar]],
-  [Large-scale phased array systems analysis in Python and Matlab],
+  [Large-scale phased array systems analysis],
   [Technical consultant on weather radar proposals],
 ))
 
 #job([Ball Aerospace (#highlight[DoD Clearance])], "Jun 2021", "Jul 2023", "RF Engineer", "Westminster, CO", (
   [#highlight[Designed and debugged multiple mission-critical RF boards under strict time constraints]],
   [Simulated, designed, and tested an RF front-end PCB at extreme temperatures],
-  [#highlight[Schematic capture and layout of RF T/R systems] (RF, digital, power), antenna range test equipment, and component test coupons],
-  [Built an embedded webpage used to control and monitor phased array electronics; high-sensitivity noise and high-power testing],
+  [#highlight[Schematic capture and layout of RF T/R systems], antenna range test equipment, and test coupons],
+  [Built an embedded webpage to control and monitor phased array electronics],
 ))
 
 #job("Colorado State University", "Jan 2021", "May 2022", "Graduate Research Assistant | Thesis focused on Radar", "Fort Collins, CO", (
-  [#highlight[Design, schematic, and layout] of a modular X-band FMCW drone radar],
-  [#highlight[Signal processing and data visualization] for Analog Devices' FMCW Phaser radar board; presented by ADI at IMS 2022 and IEEE-APS 2022],
-  [Presented the work at the IEEE International Symposium on Phased Array Systems and Technology],
+  [#highlight[Designed and laid out a modular X-band FMCW drone radar]],
+  [#highlight[Signal processing and visualization] for Analog Devices' FMCW Phaser board, shown by ADI at IMS 2022],
+  [Presented at the IEEE International Symposium on Phased Array Systems and Technology],
 ))
 
 #job("CSU-CHILL Radar Lab", "May 2020", "May 2021", "Lab Assistant", "Greeley, CO", (
-  [Built a server to host and display real-time and historical radar data using PostgreSQL, Flask, and Python],
-  [Performed characterization and measurements of radar equipment],
+  [Built a server to host and display real-time and historical radar data],
+  [Characterized and measured radar equipment],
 ))
 
 = PROJECTS
 
 #project("Marshall Bruner RF — Radar / RF Education YouTube Channel", "Aug 2023", "Present", (
-  [#highlight[53k subscribers and 1.4M+ views] across 17 long-form animated videos on FMCW radar, CFAR, phased arrays, pulse compression, I/Q sampling, and dual-pol weather radar; top video 320k+ views],
-  [Write, animate (Manim), narrate, and edit every video; built a reusable radar animation library (WSR-88D model, PPI displays, beam geometry, NEXRAD ingest) and contributed features to the ManimGX GPU engine],
-  [Ship companion interactive notebooks (marimo to WASM) and a Python / Three.js 3D weather-radar animation studio with DEM terrain and 4/3-Earth beam refraction],
+  [#highlight[53k subscribers and 1.4M+ views] across 17 animated videos on radar, phased arrays, and signal processing],
+  [Write, animate, narrate, and edit every video; built a reusable radar animation library],
+  [Ship companion interactive notebooks and a 3D weather-radar animation tool],
 ), url: "https://www.youtube.com/@MarshallBrunerRF")
 
 #project-single("FMCW Radar Bootcamp — IEEE AESS RadarConf", "Mar 2023", (
-  [Developed #highlight[signal processing software and a presentation for an FMCW radar] for the 2023 AESS Radar Bootcamp],
+  [Developed #highlight[signal processing software and a presentation] for the 2023 AESS Radar Bootcamp],
 ), url: "https://radar2023.ieee-radarconf.org/radar-boot-camp")
 
 = EDUCATION
@@ -195,7 +195,7 @@
 
 = SKILLS & ABILITIES
 
-#skill("Radar / RF", [FMCW and pulsed radar design, pulse compression, dual-polarization polarimetry, phased arrays, link budgets, Doppler / spectral moment estimation, CFAR, receiver noise and sensitivity analysis, weather radar operations and deployment])
+#skill("Radar / RF", [FMCW and pulsed radar design, pulse compression, dual-pol polarimetry, phased arrays, link budgets, Doppler processing, weather radar operations])
 #skill("Languages", [Python (NumPy, SciPy, Pandas, PyTorch, FastAPI, Flask), Rust, Go, C / C++, SystemVerilog, Bash, SQL, Matlab, TypeScript])
 #skill("Design / Simulation Tools", [KiCad, AWR Microwave Office, HFSS, ADS, LTSpice, Cadence, QucsStudio, Vivado])
 #skill("Lab / Infrastructure", [VNA, spectrum analyzer, oscilloscope, noise figure and high-power test; Git, Linux, Docker, PostgreSQL, Tailscale, LaTeX, Manim])
