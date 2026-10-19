@@ -16,6 +16,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{fontawesome5}
+\usepackage{plex-mono}   % IBM Plex Mono for the name (\plexmono)
 \usepackage[hidelinks]{hyperref}
 \usepackage{tabularx}
 \usepackage{listofitems} % comma-separated bullet lists
@@ -51,8 +52,8 @@
 % Arguments: name, phone, email, linkedin handle, github handle, youtube handle, website
 \newcommand{\namefull}[7]{
   \begin{center}
-    {\Huge \scshape \texttt{#1}} \\ \vspace{3mm}
-    \small \raisebox{-0.1\height}\faPhone \ \underline{#2} ~
+    {\Huge \plexmono #1} \\ \vspace{3mm}
+    \footnotesize \raisebox{-0.1\height}\faPhone \ \underline{#2} ~
     \href{mailto:#3}{\raisebox{-0.1\height} \faEnvelope \  \underline{#3}} ~
     \href{https://linkedin.com/in/#4}{\raisebox{-0.1\height} \faLinkedin \  \underline{#4}} ~
     \href{https://github.com/#5}{\raisebox{-0.1\height} \faGithub \  \underline{#5}} ~
@@ -65,7 +66,7 @@
 % Arguments: name, phone, email, linkedin handle, github handle, (unused)
 \newcommand{\namenoloc}[6]{
   \begin{center}
-    {\Huge \scshape \texttt{#1}} \\ \vspace{4mm}
+    {\Huge \plexmono #1} \\ \vspace{4mm}
     \small \raisebox{-0.1\height}\faPhone \ \underline{#2} ~
     \href{mailto:#3}{\raisebox{-0.1\height} \faEnvelope \  \underline{#3}} ~
     \href{https://linkedin.com/in/#4}{\raisebox{-0.1\height} \faLinkedin \  \underline{#4}} ~
