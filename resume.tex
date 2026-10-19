@@ -46,7 +46,10 @@
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-7pt}\rule{\textwidth}{0.5pt}]
 \titlespacing*{\section}{0pt}{5pt}{3pt}
 
-\DeclareRobustCommand{\boldblue}[1]{{\textcolor{blue}{\textbf{#1}}}}
+% Highlight command. Pick one definition:
+\DeclareRobustCommand{\boldblue}[1]{#1}                               % off (plain text)
+% \DeclareRobustCommand{\boldblue}[1]{\textbf{#1}}                    % bold only
+% \DeclareRobustCommand{\boldblue}[1]{{\textcolor{blue}{\textbf{#1}}}} % bold + blue
 
 % ---------- Header ----------
 % Arguments: name, phone, email, linkedin handle, github handle, youtube handle, website
